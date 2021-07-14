@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Project 78</title>
+        <heading> Gallery </heading>
+    </head>
+    <body>
+        <script>
+            var names = ["Jadon", "Steve", "Rozanne", "Chris"];
+            console.log(names);
+            var images = ["boy.png","brother.png","lady.png","man.png"];
+           var i = 0;
+
+            function update(){
+               i++;
+               var numbers_of_family_member_in_array = names.length;
+               if(i >= numbers_of_family_member_in_array){
+                   i = 0;
+               } 
+               var updatedImage = images[i];
+               var updatedName = names[i];
+               document.getElementById("family_member_image").src = updatedImage;
+               document.getElementById("family_member_name").innerHTML = "<button onclick='update()'>" + updatedName + "</button>" ;//updatedName;
+           }
+        </script>
+        <style>
+            
+            .family{
+                width: 400;
+                height: 500;
+            }
+            
+        </style>
+        <h4 id="family_member_name" >Jadon</h4>
+        <img id= "family_member_image" class="family" src="boy.png">
+        <button onclick="update()">Next</button>
+        <br>
+        
+
+        
+    </body>
+</html>
